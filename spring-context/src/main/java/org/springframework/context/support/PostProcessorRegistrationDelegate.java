@@ -80,6 +80,9 @@ final class PostProcessorRegistrationDelegate {
 			// uninitialized to let the bean factory post-processors apply to them!
 			// Separate between BeanDefinitionRegistryPostProcessors that implement
 			// PriorityOrdered, Ordered, and the rest.
+			// 1.调用BeanDefinitionRegistryPostProcessor的后置处理,并依照PriorityOrdered,Ordered和其他的顺序来调用
+			//   主要是调用ConfigurationClassPostProcessor这个类,这个类扫描扫描spring上下文来查找BeanDefinition
+			// 2.
 			List<BeanDefinitionRegistryPostProcessor> currentRegistryProcessors = new ArrayList<>();
 
 			// First, invoke the BeanDefinitionRegistryPostProcessors that implement PriorityOrdered.

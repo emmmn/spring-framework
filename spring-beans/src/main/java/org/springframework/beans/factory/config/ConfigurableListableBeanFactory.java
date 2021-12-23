@@ -89,7 +89,7 @@ public interface ConfigurableListableBeanFactory
 	 * @return whether the bean should be considered as autowire candidate
 	 * @throws NoSuchBeanDefinitionException if there is no bean with the given name
 	 */
-	boolean isAutowireCandidate(String beanName, DependencyDescriptor descriptor)
+	boolean isAutowireCandidate(String beanName, DependencyDescriptor dDispatcherServletescriptor)
 			throws NoSuchBeanDefinitionException;
 
 	/**
